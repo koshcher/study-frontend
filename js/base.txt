@@ -1,0 +1,21 @@
+База:
+- посмотреть видос https://www.youtube.com/watch?v=ICLsMfb-WDs&t
+- Посмотреть про типи язиков програмирования:
+  - способ виполнения http://heap.altlinux.org/modules/tomcat_conf.jlev.next/languages.html
+  - типизация https://senior.ua/articles/kak-ponyat-raznicu-mezhdu-staticheskoy-i-dinamicheskoy-tipizaciey
+- переменние и константи
+- if/else
+- цикли (for, while)
+- структури данних:
+  - массив (array)
+  - лист (linked list)
+  - словарь (map)
+- функции:
+  - параметри
+  - возвращающее значение
+  - стрелочние функции
+
+Задание: написать функцию, которая будет определять, является ли число простим. Простое число делится только на 1 и на себя. Функция принимает число, возвращает bool (єто либо true либо false)
+
+- для удовольствия стоит ето посмотреть 
+- посмотреть видос https://www.youtube.com/watch?v=ICLsMfb-WDs&t

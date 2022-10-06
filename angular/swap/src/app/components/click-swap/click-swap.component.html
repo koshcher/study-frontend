@@ -1,0 +1,12 @@
+<h1>Click swap</h1>
+<div *ngFor="let row of keys; let rowIndex = index">
+  <button *ngFor="let key of row; let colIndex = index" (click)="swap(rowIndex, colIndex)"
+    [ngClass]="readyToSwap && selectedCol == colIndex && selectedRow == rowIndex ? 'btn-dark' : 'btn-light'">
+    {{key}}
+  </button>
+</div>
+
+<div>{{keys | json}}</div>
+<div>{{selectedRow | json}}</div>
+<div>{{selectedCol | json}}</div>
+<div>{{readyToSwap | json}}</div>

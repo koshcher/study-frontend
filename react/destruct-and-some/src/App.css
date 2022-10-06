@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background-color: steelblue;
+  color: white;
+}
+
+input {
+  margin: 5px;
+  border: 0;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

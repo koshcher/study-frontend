@@ -1,0 +1,9 @@
+<h1>Drag swap</h1>
+<div *ngFor="let row of keys; let rowIndex = index" class="row">
+  <div *ngFor="let key of row; let colIndex = index" draggable="true" class="btn-light" (dragover)="dragover($event)"
+    (drop)="drop(rowIndex, colIndex)" (drag)="drag(rowIndex, colIndex)">
+    {{key}}
+  </div>
+</div>
+
+<div>{{keys | json}}</div>

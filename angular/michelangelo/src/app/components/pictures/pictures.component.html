@@ -1,0 +1,10 @@
+<div class="bg-s">
+  <app-nav></app-nav>
+
+  <div class="row">
+    <a *ngFor="let picture of pictures" routerLink="/pictures/{{picture.name}}" class="col">
+      <h2>{{picture.name}}</h2>
+      <img src={{picture.src}}>
+    </a>
+  </div>
+</div>

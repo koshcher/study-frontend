@@ -1,0 +1,26 @@
+.big {
+  font-size: 25px;
+  line-height: 130%;
+  margin: 5px;
+}
+
+.in {
+  background-color: steelblue;
+  color: white;
+  width: 200px;
+  text-align: center;
+  padding: 5px;
+}
+
+.in:not(:disabled) {
+  color: steelblue;
+  background-color: white;
+}
+
+.btn {
+  color: steelblue;
+  background-color: white;
+  border: 0;
+  margin: 5px;
+  font-size: 25px;
+}

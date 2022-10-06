@@ -1,0 +1,67 @@
+<form (ngSubmit)="submit()" #signUpForm="ngForm" class="form d-flex flex-column justify-content-center">
+
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First Name</label>
+    <input [(ngModel)]="user.firstName" name="firstName" id="firstName" type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input [(ngModel)]="user.lastName" name="lastName" id="lastName" type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Gender</label>
+    <div class="d-flex flex-row">
+      <div class="form-check">
+        <label for="male" class="form-check-label me-3">Male</label>
+        <input [(ngModel)]="user.isMale" [value]="true" id="male" name="gender" type="radio" class="form-check-input">
+      </div>
+      <div class="form-check">
+        <label for="female" class="form-check-label">Female</label>
+        <input [(ngModel)]="user.isMale" name="gender" id="female" [value]="false" type="radio"
+          class="form-check-input">
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Hobby</label>
+    <div class="d-flex flex-row">
+      <div class="form-check me-5">
+        <label class="form-check-label" for="box">Box</label>
+        <input class="form-check-input" [(ngModel)]="hobby.box" type="checkbox" name="box" id="box">
+      </div>
+
+      <div class="form-check me-5">
+        <label class="form-check-label" for="swim">Swim</label>
+        <input class="form-check-input" [(ngModel)]="hobby.swim" type="checkbox" name="swim" id="swim">
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="run">Run</label>
+        <input class="form-check-input" [(ngModel)]="hobby.run" type="checkbox" name="run" id="run">
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input [(ngModel)]="user.email" name="email" id="email" required type="text" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label ">Password</label>
+    <input [(ngModel)]="user.password" #password="ngModel" name="password" id="password" required type="password"
+      class="form-control">
+    <div [hidden]="password.valid || password.pristine" class="alert alert-danger mt-2" role="alert">
+      Password must not be empty
+    </div>
+  </div>
+
+  <input type="submit" [disabled]="!signUpForm.form.valid" value="Save" class="btn btn-dark mt-3">
+  <!-- <input type="reset" value="Reset" class="btn btn-dark mt-3"> -->
+  <input type="reset" (click)="reset()" value="Reset" class="btn btn-dark mt-3">
+</form>
+
+{{user | json}}

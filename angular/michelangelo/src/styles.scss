@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  @include flex();
+
+  flex-direction: column;
+}
+
+.row {
+  @include flex();
+
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.p-h {
+  padding: 0 5em;
+}
+
+@mixin btn {
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-p {
+  @include btn();
+
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-s {
+  @include btn();
+
+  background-color: rgb(102, 172, 229);
+}
+
+.btn-b {
+  @include btn();
+
+  background-color: rgb(25, 25, 25);
+  color: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0;
+}
+
+.bg-b {
+  background-color: rgb(25, 25, 25);
+  color: rgb(255, 255, 255);
+  height: 100vh;
+}
+
+.bg-p {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+}
+
+.bg-s {
+  background-color: rgb(102, 172, 229);
+}
+
+img {
+  margin: 10px;
+  width: 40vw;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}

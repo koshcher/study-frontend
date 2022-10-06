@@ -1,0 +1,37 @@
+.board {
+  height: 300px;
+  width: 300px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  height: 90px;
+  width: 90px;
+  margin: 2px;
+  border: 3px solid white;
+
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.btn {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  border: 0;
+
+  font-size: 16px;
+  color: steelblue;
+  background-color: white;
+}
+
+.btn:active {
+  color: steelblue;
+  background-color: rgb(228, 228, 228);
+}

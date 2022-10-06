@@ -1,0 +1,15 @@
+<form (ngSubmit)="submit()" class="form d-flex flex-column justify-content-center">
+  <label for="firstName" class="form-label">First Name</label>
+  <input [(ngModel)]="user.firstName" name="firstName" type="text" class="form-control" #look required="required"
+    #firstName="ngModel">
+  <div class="alert alert-danger" role="alert">
+    A simple danger alert—check it out!
+  </div>
+
+  <label for="lastName" class="form-label mt-3">Last Name</label>
+  <input [(ngModel)]="user.lastName" name="lastName" type="text" class="form-control">
+  <input type="submit" value="Save" class="btn btn-dark mt-3">
+  <input type="reset" value="Reset" class="btn btn-dark mt-3">
+</form>
+
+{{user | json}}

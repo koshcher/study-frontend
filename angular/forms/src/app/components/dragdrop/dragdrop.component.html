@@ -1,0 +1,17 @@
+<div cdkDropList cdkDropListOrientation="horizontal" #topKeys="cdkDropList" [cdkDropListData]="top"
+  [cdkDropListConnectedTo]="[homeKeys]" class="example-list" (cdkDropListDropped)="dropKey($event)">
+  <div class="example-box" *ngFor="let key of top; let i = index" (cdkDragStarted)="enter($event, i)" cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    {{key}}
+  </div>
+</div>
+
+<hr>
+
+<div cdkDropList cdkDropListOrientation="horizontal" #homeKeys="cdkDropList" [cdkDropListData]="home"
+  [cdkDropListConnectedTo]="[topKeys]" class="example-list" (cdkDropListDropped)="dropKey($event)">
+  <div class="example-box" *ngFor="let key of home; let i = index" (cdkDragStarted)="enter($event, i)" cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    {{key}}
+  </div>
+</div>
